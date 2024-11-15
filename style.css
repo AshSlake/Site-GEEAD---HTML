@@ -1,22 +1,32 @@
+body {
+  /* Define a fonte para o body; os títulos herdam */
+  font-family: "Montserrat", sans-serif; /* Adicione uma fonte de fallback genérica */
+}
+
 .w3-sidebar {
   width: 120px;
   background-color: #222;
-  @media only screen and (max-width: 600px) {
-    #main {
-      margin-left: 0;
-    }
+}
+
+#main {
+  /* Usando #main como no seu HTML anterior. Mude para .main se for uma classe */
+  margin-left: 120px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
   }
 }
 
-.body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", "sans-serif";
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  transition: transform 0.5s ease; /* Movida a transição para cá para melhor performance */
 }
-.main {
-  margin-left: 120px;
+
+img:hover {
+  transform: scale(1.1); /* Adicionando um efeito de escala para o hover */
 }

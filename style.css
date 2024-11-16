@@ -29,3 +29,7 @@ body {
   height: 5%;
   object-fit: cover; /* Ajusta o conteúdo da imagem para ocupar todo o espaço disponível */
 }
+
+.text-underline {
+  text-decoration: underline;
+}

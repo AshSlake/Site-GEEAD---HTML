@@ -19,14 +19,13 @@ body {
   }
 }
 
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 5px;
+.transition:hover {
+  transform: scale(1.1); /* Adicionando um efeito de escala para o hover */
   transition: transform 0.5s ease; /* Movida a transição para cá para melhor performance */
 }
 
-img:hover {
-  transform: scale(1.1); /* Adicionando um efeito de escala para o hover */
+.icon {
+  width: 8%;
+  height: 8%;
+  object-fit: cover; /* Ajusta o conteúdo da imagem para ocupar todo o espaço disponível */
 }

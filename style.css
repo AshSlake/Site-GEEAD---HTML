@@ -33,3 +33,39 @@ body {
 .text-underline {
   text-decoration: underline;
 }
+
+.display-right {
+  position: absolute;
+  top: 50%;
+  right: -4%;
+}
+
+/* Adicionando animações de fade-in e fade-out para elementos com as classes .fade-in e .fade-out */
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-out {
+  animation: fade-out 1s ease-in-out;
+}
+
+/* Definindo a animação de fade-in */
+@keyframes fade-in {
+  from {
+    opacity: 0; /* O elemento começa transparente */
+  }
+  to {
+    opacity: 1; /* O elemento fica opaco */
+  }
+}
+
+/* Definindo a animação de fade-out */
+@keyframes fade-out {
+  from {
+    opacity: 1; /* O elemento começa opaco */
+  }
+  to {
+    opacity: 0; /* O elemento fica transparente */
+  }
+}

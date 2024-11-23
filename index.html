@@ -246,115 +246,176 @@
       <h2 class="w3-text-cyan">Docentes</h2>
       <hr style="width: 200px" class="w3-opacity" />
 
-      <!-- Docente 1 -->
-      <div>
-        <div class="w3-container w3-cell w3-animate-opacity">
-          <img
-            src="https://www.w3schools.com/w3css/img_avatar5.png"
-            alt="Alps"
-            style="width: 75%"
-          />
+      <div class="w3-content w3-display-container w3-center">
+        <!-- Docente 1 -->
+        <div class="slide">
+          <div class="w3-container w3-cell w3-animate-opacity">
+            <img
+              src="https://www.w3schools.com/w3css/img_avatar5.png"
+              alt="Alps"
+              style="width: 75%"
+            />
+          </div>
+
+          <div class="w3-container w3-cell">
+            <h1 class="w3-text-cyan text-underline">
+              Francisca Amendoa Carvalho
+            </h1>
+
+            <section>
+              <h2 class="w3-text-cyan">Formação Acadêmica</h2>
+              <ul>
+                <li>
+                  Graduada em Tecnologia em Processamento de Dados pela
+                  Faculdade de São Paulo (2024)
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="w3-text-cyan">Atuação Profissional</h2>
+              <ul>
+                <li>
+                  Professora Titular da Faculdade Federal de Educação de Maringá
+                </li>
+                <li>Experiência na área de Educação.</li>
+              </ul>
+            </section>
+          </div>
         </div>
 
-        <div class="w3-container w3-cell">
-          <h1 class="w3-text-cyan text-underline">
-            Francisca Amendoa Carvalho
-          </h1>
+        <!-- Docente 2 -->
+        <div class="slide">
+          <div class="w3-container w3-cell w3-animate-opacity">
+            <img
+              src="https://www.w3schools.com/w3css/img_avatar6.png"
+              alt="Alps"
+              style="width: 75%"
+            />
+          </div>
 
-          <section>
-            <h2 class="w3-text-cyan">Formação Acadêmica</h2>
-            <ul>
-              <li>
-                Graduada em Tecnologia em Processamento de Dados pela Faculdade
-                de São Paulo (2024)
-              </li>
-            </ul>
-          </section>
+          <div class="w3-container w3-cell">
+            <h1 class="w3-text-cyan text-underline">Maria Antonia</h1>
 
-          <section>
-            <h2 class="w3-text-cyan">Atuação Profissional</h2>
-            <ul>
-              <li>
-                Professora Titular da Faculdade Federal de Educação de Maringá
-              </li>
-              <li>Experiência na área de Educação.</li>
-            </ul>
-          </section>
+            <section>
+              <h2 class="w3-text-cyan">Formação Acadêmica</h2>
+              <ul>
+                <li>
+                  Graduada em Tecnologia em Engenharia de Dados pela Faculdade
+                  de São Paulo (2024)
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="w3-text-cyan">Atuação Profissional</h2>
+              <ul>
+                <li>Engenheira de Dados na Dock</li>
+                <li>Experiência na área de Tecnologia.</li>
+              </ul>
+            </section>
+          </div>
         </div>
+
+        <!-- Docente 3 -->
+        <div class="slide">
+          <div class="w3-container w3-cell w3-animate-opacity">
+            <img
+              src="https://www.w3schools.com/w3css/img_avatar4.png"
+              alt="Alps"
+              style="width: 75%"
+            />
+          </div>
+
+          <div class="w3-container w3-cell">
+            <h1 class="w3-text-cyan text-underline">Julia da Silva</h1>
+
+            <section>
+              <h2 class="w3-text-cyan">Formação Acadêmica</h2>
+              <ul>
+                <li>
+                  Graduada em Psicologia em Engenharia de Psicologia pela
+                  Faculdade de São Paulo (2024)
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="w3-text-cyan">Atuação Profissional</h2>
+              <ul>
+                <li>Engenheira Psicologa na Nexo</li>
+                <li>Experiência na área de Psicologia.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <hr />
+
+        <button
+          class="w3-button w3-cyan w3-display-left w3-round-xxlarge"
+          id="prev"
+        >
+          &#10094;
+        </button>
+        <button
+          class="w3-button w3-cyan display-right w3-round-xxlarge"
+          id="next"
+        >
+          &#10095;
+        </button>
       </div>
+      <script>
+        const slides = document.getElementsByClassName("slide");
+        let currentSlide = 0;
+        const fadeTime = 800; // Tempo da transição em milissegundos
 
-      <hr />
-      <br />
+        function showSlide(n) {
+          // Lógica para loop infinito
+          n = (n + slides.length) % slides.length;
 
-      <!-- Docente 2 -->
-      <div>
-        <div class="w3-container w3-cell w3-animate-opacity">
-          <img
-            src="https://www.w3schools.com/w3css/img_avatar6.png"
-            alt="Alps"
-            style="width: 75%"
-          />
-        </div>
+          // Esconde todos os slides
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
 
-        <div class="w3-container w3-cell">
-          <h1 class="w3-text-cyan text-underline">Maria Antonia</h1>
+          // Mostra o slide atual
+          slides[n].style.display = "block";
+          slides[n].classList.add("fade-in");
 
-          <section>
-            <h2 class="w3-text-cyan">Formação Acadêmica</h2>
-            <ul>
-              <li>
-                Graduada em Tecnologia em Engenharia de Dados pela Faculdade de
-                São Paulo (2024)
-              </li>
-            </ul>
-          </section>
+          // Remove a classe fade-in do slide anterior após a transição
+          setTimeout(() => {
+            if (currentSlide !== n) {
+              //Evita remover do slide atual se não houve mudança.
+              slides[currentSlide].classList.remove("fade-in");
+            }
+          }, fadeTime);
 
-          <section>
-            <h2 class="w3-text-cyan">Atuação Profissional</h2>
-            <ul>
-              <li>Engenheira de Dados na Dock</li>
-              <li>Experiência na área de Tecnologia.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
+          currentSlide = n;
+        }
 
-      <hr />
-      <br />
+        function nextSlide() {
+          showSlide(currentSlide + 1);
+        }
 
-      <!-- Docente 3 -->
-      <div>
-        <div class="w3-container w3-cell w3-animate-opacity">
-          <img
-            src="https://www.w3schools.com/w3css/img_avatar4.png"
-            alt="Alps"
-            style="width: 75%"
-          />
-        </div>
+        function prevSlide() {
+          showSlide(currentSlide - 1);
+        }
 
-        <div class="w3-container w3-cell">
-          <h1 class="w3-text-cyan text-underline">Julia da Silva</h1>
+        // Inicializa o slideshow
+        showSlide(currentSlide);
 
-          <section>
-            <h2 class="w3-text-cyan">Formação Acadêmica</h2>
-            <ul>
-              <li>
-                Graduada em Psicologia em Engenharia de Psicologia pela
-                Faculdade de São Paulo (2024)
-              </li>
-            </ul>
-          </section>
+        // Adiciona event listeners para botões de navegação (se existirem)
+        const nextButton = document.getElementById("next");
+        const prevButton = document.getElementById("prev");
 
-          <section>
-            <h2 class="w3-text-cyan">Atuação Profissional</h2>
-            <ul>
-              <li>Engenheira Psicologa na Nexo</li>
-              <li>Experiência na área de Psicologia.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-      <hr />
+        if (nextButton) {
+          nextButton.addEventListener("click", nextSlide);
+        }
+
+        if (prevButton) {
+          prevButton.addEventListener("click", prevSlide);
+        }
+      </script>
     </div>
 
     <!-- Mercado de Trabalho -->
